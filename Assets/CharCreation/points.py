@@ -1,17 +1,14 @@
-from Assets.funcs import wait, showRace, showClasse
-from Informations.information import Describe
+from assets.funcs import wait, showClasse, getClass
 
 def distribuirPontos(name):
     while True:
         print(f"Bem-Vindo {name} a distribuição de pontos do Randventure!")
-        wait()
+        wait.smallwait()
         print(f"Iremos fazer a distribuição de pontos do seu personagem")
-        wait()
         print(f"Quer saber quais são os melhores tipo de distribuição para o seu personagem?")
-        wait()
+        wait.smallwait()
         answer1 = str(input("(Escreva S para sim ou N para não) \n"))
-        running = True
-        while running == True:
+        while True:
             if answer1.lower == "n":
                 break   
             else:
@@ -29,7 +26,7 @@ def distribuirPontos(name):
                 
         while pontosdisponiveis > 0:
             print("Voce tem ", pontosdisponiveis, " digite qual o atributo que deseja aumentar")
-            wait()
+            wait.smallwait()
             print(
                 "1- Força = ",forca,
                 "\n2- Destreza = ",destreza,
@@ -38,13 +35,14 @@ def distribuirPontos(name):
                 "\n5- Sabedoria = ", sabedoria,
                 "\n6- Carisma = ", carisma,
             )
-            wait()
+            wait.mediumwait()
             choose = int(input("\nDigite qual você deseja aumentar (use os numeros indicados na frente do atributo!)\n"))
             match choose:
                 case 1:
-                    wait()
+                    print("\n\n")
+                    wait.smallwait()
                     print("Atributo escolhido: (força)")
-                    wait()
+                    wait.smallwait()
                     add = int(input("Digite a quantidade de pontos que deseja adicionar: "))
                     if add < pontosdisponiveis:
                         pass
@@ -54,11 +52,13 @@ def distribuirPontos(name):
                     forca = forca + add
                     pontosdisponiveis -= add
                     print("\n\n\n\n\n\n\n")
+                    wait.longwait()
                     continue
                 case 2:
-                    wait()
+                    print("\n\n")
+                    wait.smallwait()
                     print("Atributo escolhido: (Destreza)")
-                    wait()
+                    wait.smallwait()
                     add = int(input("Digite a quantidade de pontos que deseja adicionar: "))
                     if add < pontosdisponiveis:
                         pass
@@ -68,11 +68,13 @@ def distribuirPontos(name):
                     destreza = destreza + add
                     pontosdisponiveis -= add
                     print("\n\n\n\n\n\n\n")
+                    wait.longwait()
                     continue
                 case 3:
-                    wait()
+                    print("\n\n")
+                    wait.smallwait()
                     print("Atributo escolhido: (Constituição)")
-                    wait()
+                    wait.smallwait()
                     add = int(input("Digite a quantidade de pontos que deseja adicionar: "))
                     if add < pontosdisponiveis:
                         pass
@@ -82,11 +84,13 @@ def distribuirPontos(name):
                     constituicao = constituicao + add
                     pontosdisponiveis -= add
                     print("\n\n\n\n\n\n\n")
+                    wait.longwait()
                     continue
                 case 4:
-                    wait()
+                    print("\n\n")
+                    wait.smallwait()
                     print("Atributo escolhido: (Inteligencia")
-                    wait()
+                    wait.smallwait()
                     add = int(input("Digite a quantidade de pontos que deseja adicionar: "))
                     if add < pontosdisponiveis:
                         pass
@@ -96,11 +100,13 @@ def distribuirPontos(name):
                     inteligencia = inteligencia + add
                     pontosdisponiveis -= add
                     print("\n\n\n\n\n\n\n")
+                    wait.longwait()
                     continue
                 case 5:
-                    wait()
+                    print("\n\n")
+                    wait.smallwait()
                     print("Atributo escolhido: (Sabedoria)")
-                    wait()
+                    wait.smallwait()
                     add = int(input("Digite a quantidade de pontos que deseja adicionar: "))
                     if add < pontosdisponiveis:
                         pass
@@ -110,11 +116,13 @@ def distribuirPontos(name):
                     sabedoria = sabedoria + add
                     pontosdisponiveis -= add
                     print("\n\n\n\n\n\n\n")
+                    wait.longwait()
                     continue
                 case 6:
-                    wait()
+                    print("\n\n")
+                    wait.smallwait()
                     print("Atributo escolhido: (Carisma)")
-                    wait()
+                    wait.smallwait()
                     add = int(input("Digite a quantidade de pontos que deseja adicionar: "))
                     if add < pontosdisponiveis:
                         pass
@@ -124,7 +132,12 @@ def distribuirPontos(name):
                     carisma = carisma + add
                     pontosdisponiveis -= add
                     print("\n\n\n\n\n\n\n")
+                    wait.longwait()
                     continue
+                case _:
+                    print("\n\n")
+                    wait.smallwait()
+                    
                 
 def distribuirPericias(classe):
     #druida, guerreiro, barbaro e mago
@@ -136,6 +149,28 @@ def distribuirPericias(classe):
             print("Bem vindo! iremos fazer a escolha de pericias!\n")
             wait()
             print("A raça que você escolheu anteriormente foi: ", classe)
+            wait()
             print("Gostaria de rever algumas coisas sobre a classe")
-             
+            answer1 = str(input("(Escreva S para sim ou N para não) \n"))
+            while True:
+                if answer1.lower == "n":
+                    break   
+                else:
+                    getClass()
+                    answer2 = str(input("(Escreva S para sim ou N para não) \n"))
+                    if answer2.lower == "s":
+                        continue
+                    else:
+                        break
+        
+            dictpericias = {
+                'arcanismo': False,
+                'adestrar_animais': False,
+                'intuicao': False,
+                'medicina': False,
+                'natureza': False,
+                'percepcao': False,
+                'religiao': False,
+                'sobrevivencia': False
+            }
             

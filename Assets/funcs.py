@@ -1,22 +1,35 @@
 from time import sleep as t
-from Informations.information import Describe
-
-def wait():
-    t(1)
+from assets.info.information import Describe
+class wait:
+    def smallwait():
+        t(1)
+    def mediumwait():
+        t(2.5)
+    def longwait():
+        t(5)
+        
 
 def showClasse():
     print("Qual seria a classe?")
-    wait()
+    wait.smallwait()
     classasked = str(input())
     desc = Describe
-    wait()
     print(desc.descricaoClasse(None,classasked))
-    wait()
+    wait.longwait()
 def showRace():
     print("Qual seria a raça?")
-    wait()
+    wait.smallwait()
     raceasked = str(input())
     desc = Describe
-    wait()
     print(desc.descricaoRaca(None,raceasked))
-    wait()
+    wait.longwait()
+def getClass(classe):
+    classasked = classe
+    desc = Describe
+    print(desc.descricaoClasse(None, classasked))
+    wait.mediumwait()
+def getRace(race):
+    raceasked = race
+    desc = Describe
+    print(desc.descricaoClasse(None, raceasked))
+    wait.mediumwait()
