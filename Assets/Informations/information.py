@@ -74,3 +74,4 @@ class Describe:
                     "Estilo de Combate: Ganha bonus ao escolher um estilo, como defesa, arquearia ou luta com duas armas.",
                     "Atributo principal: Forca ou Destreza (depende do estilo de luta)."
                 ]
+
