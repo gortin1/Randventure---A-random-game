@@ -137,6 +137,7 @@ def distribuirPontos(name):
                 case _:
                     print("\n\n")
                     wait.smallwait()
+        return carisma, forca, constituicao, sabedoria, inteligencia, destreza          
                     
                 
 def distribuirPericias(classe):
@@ -156,21 +157,28 @@ def distribuirPericias(classe):
                 if answer1.lower == "n":
                     break   
                 else:
-                    getClass()
+                    getClass(classe)
                     answer2 = str(input("(Escreva S para sim ou N para não) \n"))
                     if answer2.lower == "s":
                         continue
                     else:
                         break
         
-            dictpericias = {
-                'arcanismo': False,
-                'adestrar_animais': False,
-                'intuicao': False,
-                'medicina': False,
-                'natureza': False,
-                'percepcao': False,
-                'religiao': False,
-                'sobrevivencia': False
-            }
+            dictpericias = [
+                'pericias':{
+                    'arcanismo': False,
+                    'adestrar_animais': False,
+                    'intuicao': False,
+                    'medicina': False,
+                    'natureza': False,
+                    'percepcao': False,
+                    'religiao': False,
+                    'sobrevivencia': False
+                    }    
+            ]
             
+            while True:
+                i = 2
+                if i > 0:
+                    print("Você pode escolher", i,"pericias entre as listadas abaixo\n", dictpericias['showPericias'])
+                    periciaescolhida = 
