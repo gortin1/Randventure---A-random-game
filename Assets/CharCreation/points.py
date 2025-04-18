@@ -9,29 +9,29 @@ def distribuirPontos(name):
         wait.smallwait()
         answer1 = str(input("(Escreva S para sim ou N para não) \n"))
         while True:
-            if answer1.lower == "n":
+            if answer1.lower() == "n":
                 break   
             else:
                 showClasse()
                 digitar("Deseja saber de outra classe?")
                 answer2 = str(input("(Escreva S para sim ou N para não) \n"))
-                if answer2.lower == "s":
-                    continue
-                else:
+                if answer2.lower() == "n":
                     break
+                else:
+                    continue
         digitar("Bem, vamos começar com a distribuição de pontos!")
         
         forca, destreza, constituicao, inteligencia, sabedoria, carisma = 0,0,0,0,0,0
         pontosdisponiveis = 10
                 
         while pontosdisponiveis > 0:
-            digitar("Voce tem ", pontosdisponiveis, " digite qual o atributo que deseja aumentar")
+            digitar("Voce tem ", pontosdisponiveis, " pontos disponiveis, digite qual o atributo que deseja aumentar")
             wait.smallwait()
             digitar(
                 "1- Força = ",forca,
                 "\n2- Destreza = ",destreza,
                 "\n3- Constituição = ",constituicao,
-                "\n4- Inteligencia",inteligencia,
+                "\n4- Inteligencia = ",inteligencia,
                 "\n5- Sabedoria = ", sabedoria,
                 "\n6- Carisma = ", carisma,
             )
@@ -44,7 +44,7 @@ def distribuirPontos(name):
                     digitar("Atributo escolhido: (força)")
                     wait.smallwait()
                     add = int(input("Digite a quantidade de pontos que deseja adicionar: "))
-                    if add < pontosdisponiveis:
+                    if add <= pontosdisponiveis:
                         pass
                     else:
                         digitar("Erro ao adicionar! pontos insuficientes")
@@ -60,7 +60,7 @@ def distribuirPontos(name):
                     digitar("Atributo escolhido: (Destreza)")
                     wait.smallwait()
                     add = int(input("Digite a quantidade de pontos que deseja adicionar: "))
-                    if add < pontosdisponiveis:
+                    if add <= pontosdisponiveis:
                         pass
                     else:
                         digitar("Erro ao adicionar! pontos insuficientes")
@@ -76,7 +76,7 @@ def distribuirPontos(name):
                     digitar("Atributo escolhido: (Constituição)")
                     wait.smallwait()
                     add = int(input("Digite a quantidade de pontos que deseja adicionar: "))
-                    if add < pontosdisponiveis:
+                    if add <= pontosdisponiveis:
                         pass
                     else:
                         digitar("Erro ao adicionar! pontos insuficientes")
@@ -92,7 +92,7 @@ def distribuirPontos(name):
                     digitar("Atributo escolhido: (Inteligencia")
                     wait.smallwait()
                     add = int(input("Digite a quantidade de pontos que deseja adicionar: "))
-                    if add < pontosdisponiveis:
+                    if add <= pontosdisponiveis:
                         pass
                     else:
                         digitar("Erro ao adicionar! pontos insuficientes")
@@ -108,7 +108,7 @@ def distribuirPontos(name):
                     digitar("Atributo escolhido: (Sabedoria)")
                     wait.smallwait()
                     add = int(input("Digite a quantidade de pontos que deseja adicionar: "))
-                    if add < pontosdisponiveis:
+                    if add <= pontosdisponiveis:
                         pass
                     else:
                         digitar("Erro ao adicionar! pontos insuficientes")
@@ -124,7 +124,7 @@ def distribuirPontos(name):
                     digitar("Atributo escolhido: (Carisma)")
                     wait.smallwait()
                     add = int(input("Digite a quantidade de pontos que deseja adicionar: "))
-                    if add < pontosdisponiveis:
+                    if add <= pontosdisponiveis:
                         pass
                     else:
                         digitar("Erro ao adicionar! pontos insuficientes")
@@ -140,7 +140,6 @@ def distribuirPontos(name):
         return carisma, forca, constituicao, sabedoria, inteligencia, destreza          
                                   
 def distribuirPericias(classe):
-    #druida, guerreiro, barbaro e mago
     
     match classe:
         case "druida":
@@ -151,15 +150,15 @@ def distribuirPericias(classe):
             digitar("Gostaria de rever algumas coisas sobre a classe")
             answer1 = str(input("(Escreva S para sim ou N para não) \n"))
             while True:
-                if answer1.lower == "n":
+                if answer1.lower() == "n":
                     break   
                 else:
                     getClass(classe)
                     answer2 = str(input("(Escreva S para sim ou N para não) \n"))
-                    if answer2.lower == "s":
-                        continue
-                    else:
+                    if answer2.lower() == "n":
                         break
+                    else:
+                        continue
         
             dictpericias ={
                 'pericias': {
@@ -202,15 +201,15 @@ def distribuirPericias(classe):
             digitar("Gostaria de rever algumas coisas sobre a classe")
             answer1 = str(input("(Escreva S para sim ou N para não) \n"))
             while True:
-                if answer1.lower == "n":
+                if answer1.lower() == "n":
                     break   
                 else:
                     getClass(classe)
                     answer2 = str(input("(Escreva S para sim ou N para não) \n"))
-                    if answer2.lower == "s":
-                        continue
-                    else:
+                    if answer2.lower() == "n":
                         break
+                    else:
+                        continue
             dictpericias ={
                 'pericias': {
                     'acrobacia': False,
@@ -251,15 +250,15 @@ def distribuirPericias(classe):
             digitar("Gostaria de rever algumas coisas sobre a classe")
             answer1 = str(input("(Escreva S para sim ou N para não) \n"))
             while True:
-                if answer1.lower == "n":
+                if answer1.lower() == "n":
                     break   
                 else:
                     getClass(classe)
                     answer2 = str(input("(Escreva S para sim ou N para não) \n"))
-                    if answer2.lower == "s":
-                        continue
-                    else:
+                    if answer2.lower() == "n":
                         break
+                    else:
+                        continue
             
             dictpericias ={
                 'pericias': {
@@ -299,15 +298,15 @@ def distribuirPericias(classe):
             digitar("Gostaria de rever algumas coisas sobre a classe")
             answer1 = str(input("(Escreva S para sim ou N para não) \n"))
             while True:
-                if answer1.lower == "n":
+                if answer1.lower() == "n":
                     break   
                 else:
                     getClass(classe)
                     answer2 = str(input("(Escreva S para sim ou N para não) \n"))
-                    if answer2.lower == "s":
-                        continue
-                    else:
+                    if answer2.lower() == "n":
                         break
+                    else:
+                        continue
             
             dictpericias ={
                 'pericias': {

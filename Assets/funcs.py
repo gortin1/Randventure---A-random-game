@@ -14,24 +14,24 @@ def showClasse():
     classasked = str(input())
     desc = Describe
     wait.longwait()
-    return desc.descricaoRaca(classasked)
+    return digitar(desc.descricaoClasse(classasked))
 def showRace():
     print("Qual seria a raça?")
     wait.smallwait()
     raceasked = str(input())
     desc = Describe
     wait.longwait()
-    return desc.descricaoRaca(raceasked)
+    return digitar(desc.descricaoRaca(raceasked))
 def getClass(classe):
     classasked = classe
     desc = Describe
     wait.mediumwait()
-    return desc.descricaoClasse(classasked)
+    return digitar(desc.descricaoClasse(classasked))
 def getRace(race):
     raceasked = race
     desc = Describe
     wait.mediumwait()
-    return desc.descricaoRaca(raceasked)
+    return digitar(desc.descricaoRaca(raceasked))
 def showPericias(race):
     match race:
         case 'druida':
