@@ -1,8 +1,6 @@
 class Describe:
-    def __init__(self):
-        pass
-
-    def descricaoRaca(self, raceasked: str):
+   
+    def descricaoRaca(raceasked: str):
         match raceasked.lower():
             case "humano":
                 return [
@@ -39,7 +37,7 @@ class Describe:
             case _:
                 return ["Raca nao encontrada."]
 
-    def descricaoClasse(self, classaked: str):
+    def descricaoClasse( classaked: str):
         match classaked.lower():
             case "druida":
                 return[
@@ -74,4 +72,45 @@ class Describe:
                     "Estilo de Combate: Ganha bonus ao escolher um estilo, como defesa, arquearia ou luta com duas armas.",
                     "Atributo principal: Forca ou Destreza (depende do estilo de luta)."
                 ]
-
+    def descricaoPericias(classe: str):
+        match classe:
+            case 'druida':
+                return '\n'.join([
+                     'arcanismo',
+                     'adestrar animais',
+                     'intuicao',
+                     'medicina',
+                     'natureza',
+                     'percepcao',
+                     'religiao',
+                     'sobrevivencia'
+                     ])
+            
+            case 'mago':
+                return '\n'.join(['arcanismo',
+                        'historia',
+                        'intuicao',
+                        'investigacao',
+                        'medicina',
+                        'religiao'
+                        ])
+            case 'barbaro':
+                return '\n'.join([
+                        'adestrar animais',
+                        'atletismo',
+                        'intimidacao',
+                        'natureza',
+                        'percepcao',
+                        'sobrevivencia'
+                        ])
+            case 'guerreiro':
+                return '\n'.join([
+                        'acrobacia',
+                        'adestrar animais',
+                        'atletismo',
+                        'historia',
+                        'intuicao',
+                        'intimidacao',
+                        'percepcao',
+                        'sobrevivencia'
+                        ])
