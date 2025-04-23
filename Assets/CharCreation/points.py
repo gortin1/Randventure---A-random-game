@@ -137,7 +137,12 @@ def distribuirPontos(name):
                 case _:
                     print("\n\n")
                     wait.smallwait()
-        return carisma, forca, constituicao, sabedoria, inteligencia, destreza          
+        return {'forca': forca, 
+                'destreza':destreza, 
+                'constituicao':constituicao, 
+                'inteligencia':inteligencia, 
+                'sabedoria':sabedoria, 
+                'carisma':carisma}  
                                   
 def distribuirPericias(classe):
     
@@ -192,6 +197,8 @@ def distribuirPericias(classe):
                     dictpericias['pericias'][chave] = 2
                 else:
                     dictpericias['pericias'][chave] = 0
+            
+            return dictpericias
         
         case 'guerreiro':
             digitar("Bem vindo! iremos fazer a escolha de pericias!\n")
@@ -242,7 +249,12 @@ def distribuirPericias(classe):
                     dictpericias['pericias'][chave] = 2
                 else:
                     dictpericias['pericias'][chave] = 0
+                    
+            return dictpericias     
+                    
+            
         case 'mago':
+            
             digitar("Bem vindo! iremos fazer a escolha de pericias!\n")
             wait.smallwait()
             digitar("A raça que você escolheu anteriormente foi: ", classe)
@@ -290,6 +302,8 @@ def distribuirPericias(classe):
                     dictpericias['pericias'][chave] = 2
                 else:
                     dictpericias['pericias'][chave] = 0
+                    
+            return dictpericias          
         case 'barbaro':
             digitar("Bem vindo! iremos fazer a escolha de pericias!\n")
             wait.smallwait()
@@ -338,3 +352,8 @@ def distribuirPericias(classe):
                     dictpericias['pericias'][chave] = 2
                 else:
                     dictpericias['pericias'][chave] = 0
+            
+            return dictpericias
+        
+def getpericia(dictpericias, namepericia):
+    return dictpericias['pericias'].get(namepericia)

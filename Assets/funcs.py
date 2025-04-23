@@ -1,5 +1,6 @@
 from time import sleep as t
 from assets.info.information import Describe
+from random import randint as r
 import sys
 class wait:
     def smallwait():
@@ -56,3 +57,9 @@ def digitar(*args, delay=0.05):
             sys.stdout.flush()
             t(delay)
     print()
+
+def rolaracao(pericia, atributo):
+    pericia = (pericia)/2 + atributo
+    valor = r(1,20)
+    result = pericia + valor
+    return result
