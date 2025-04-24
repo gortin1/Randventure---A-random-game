@@ -10,7 +10,7 @@ def distribuirPontos(name):
         answer1 = str(input("(Escreva S para sim ou N para não) \n"))
         while True:
             if answer1.lower() == "n":
-                break   
+                break
             else:
                 showClasse()
                 digitar("Deseja saber de outra classe?")
@@ -20,10 +20,10 @@ def distribuirPontos(name):
                 else:
                     continue
         digitar("Bem, vamos começar com a distribuição de pontos!")
-        
+
         forca, destreza, constituicao, inteligencia, sabedoria, carisma = 0,0,0,0,0,0
         pontosdisponiveis = 10
-                
+
         while pontosdisponiveis > 0:
             digitar("Voce tem ", pontosdisponiveis, " pontos disponiveis, digite qual o atributo que deseja aumentar")
             wait.smallwait()
@@ -48,7 +48,7 @@ def distribuirPontos(name):
                         pass
                     else:
                         digitar("Erro ao adicionar! pontos insuficientes")
-                        continue 
+                        continue
                     forca = forca + add
                     pontosdisponiveis -= add
                     print("\n\n\n\n\n\n\n")
@@ -137,15 +137,15 @@ def distribuirPontos(name):
                 case _:
                     print("\n\n")
                     wait.smallwait()
-        return {'forca': forca, 
-                'destreza':destreza, 
-                'constituicao':constituicao, 
-                'inteligencia':inteligencia, 
-                'sabedoria':sabedoria, 
-                'carisma':carisma}  
-                                  
+        return {'forca': forca,
+                'destreza':destreza,
+                'constituicao':constituicao,
+                'inteligencia':inteligencia,
+                'sabedoria':sabedoria,
+                'carisma':carisma}
+
 def distribuirPericias(classe):
-    
+
     match classe:
         case "druida":
             digitar("Bem vindo! iremos fazer a escolha de pericias!\n")
@@ -156,7 +156,7 @@ def distribuirPericias(classe):
             answer1 = str(input("(Escreva S para sim ou N para não) \n"))
             while True:
                 if answer1.lower() == "n":
-                    break   
+                    break
                 else:
                     getClass(classe)
                     answer2 = str(input("(Escreva S para sim ou N para não) \n"))
@@ -164,7 +164,7 @@ def distribuirPericias(classe):
                         break
                     else:
                         continue
-        
+
             dictpericias ={
                 'pericias': {
                     'arcanismo': False,
@@ -197,9 +197,9 @@ def distribuirPericias(classe):
                     dictpericias['pericias'][chave] = 2
                 else:
                     dictpericias['pericias'][chave] = 0
-            
+
             return dictpericias
-        
+
         case 'guerreiro':
             digitar("Bem vindo! iremos fazer a escolha de pericias!\n")
             wait.smallwait()
@@ -209,7 +209,7 @@ def distribuirPericias(classe):
             answer1 = str(input("(Escreva S para sim ou N para não) \n"))
             while True:
                 if answer1.lower() == "n":
-                    break   
+                    break
                 else:
                     getClass(classe)
                     answer2 = str(input("(Escreva S para sim ou N para não) \n"))
@@ -249,12 +249,11 @@ def distribuirPericias(classe):
                     dictpericias['pericias'][chave] = 2
                 else:
                     dictpericias['pericias'][chave] = 0
-                    
-            return dictpericias     
-                    
-            
+
+            return dictpericias
+
         case 'mago':
-            
+
             digitar("Bem vindo! iremos fazer a escolha de pericias!\n")
             wait.smallwait()
             digitar("A raça que você escolheu anteriormente foi: ", classe)
@@ -263,7 +262,7 @@ def distribuirPericias(classe):
             answer1 = str(input("(Escreva S para sim ou N para não) \n"))
             while True:
                 if answer1.lower() == "n":
-                    break   
+                    break
                 else:
                     getClass(classe)
                     answer2 = str(input("(Escreva S para sim ou N para não) \n"))
@@ -271,7 +270,7 @@ def distribuirPericias(classe):
                         break
                     else:
                         continue
-            
+
             dictpericias ={
                 'pericias': {
                     'arcanismo': False,

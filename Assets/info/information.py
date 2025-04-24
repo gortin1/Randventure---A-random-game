@@ -1,5 +1,48 @@
+from colorama import just_fix_windows_console, Fore, Style
 class Describe:
-   
+    def allClasses():
+        return '\n'.join([
+            '1- barbaro',
+            '2- bardo',
+            '3- bruxo',
+            '4- clerigo',
+            '5- druida',
+            '6- feiticeiro',
+            '7- guerreiro',
+            '8- ladino',
+            '9- mago',
+            '10- monge',
+            '11- paladino',
+            '12- patrulheiro'
+        ])
+    def allRaces():
+        return '\n'.join([
+            '1- Anao',
+            '2- Elfo',
+            '3- Halfling',
+            '4- Humano',
+            '5- Draconato',
+            '6- Gnomo',
+            '7- Meio-elfo',
+            '8- Meio-orc',
+            '9- Tiefling'
+        ])
+    def classXrace(classe: str):
+        just_fix_windows_console()
+        match classe.lower():
+            case 'barbaro':
+                return '\n'.join([
+                    'Barbaro X Anao = ' + Fore.BLUE + "Combinação boa."+ Style.RESET_ALL,
+                    'Barbaro X Elfo = ' + Fore.WHITE + "Combinação neutra."+ Style.RESET_ALL,
+                    'Barbaro X Halfling = ' + Fore.BLUE + "Combinação boa."+ Style.RESET_ALL,
+                    'Barbaro X Humano = ' + Fore.BLUE + "Combinação boa."+ Style.RESET_ALL,
+                    'Barbaro X Draconato = ' + Fore.BLUE + "Combinação boa."+ Style.RESET_ALL,
+                    'Barbaro X Gnomo = ' + Fore.BLUE + "Combinação boa."+ Style.RESET_ALL,
+                    'Barbaro X Meio-Elfo = ' + Fore.WHITE + "Combinação neutra."+ Style.RESET_ALL,
+                    'Barbaro X Meio-Orc = ' + Fore.GREEN + "Combinação perfeita."+ Style.RESET_ALL,
+                    'Barbaro X Tiefling = ' + Fore.WHITE + "Combinação neutra."+ Style.RESET_ALL
+                ])
+            #terminar o resto dasa classes
     def descricaoRaca(raceasked: str):
         match raceasked:
             case "humano":
@@ -26,7 +69,7 @@ class Describe:
                     "Tamanho: Medio (cerca de 1,20 m de altura).",
                     "Idiomas: Comum e Anao."
                 ])
-            case "orc":
+            case "meio-orc":
                 return '\n'.join([
                     "Atributos: +2 em Forca, +1 em Constituicao.",
                     "Idade: Adultos por volta dos 14 anos; vivem ate cerca de 75 anos.",
@@ -36,6 +79,8 @@ class Describe:
                 ])
             case _:
                 return print("Raca nao encontrada.")
+        
+
 
     def descricaoClasse( classaked: str):
         match classaked:

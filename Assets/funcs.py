@@ -1,5 +1,5 @@
 from time import sleep as t
-from assets.info.information import Describe
+from Assets.info.information import Describe
 from random import randint as r
 import sys
 class wait:
@@ -47,7 +47,6 @@ def showPericias(race):
         case 'guerreiro':
             pericias = Describe.descricaoPericias(race)
             return pericias
-        
 
 def digitar(*args, delay=0.05):
     for arg in args:
@@ -63,3 +62,8 @@ def rolaracao(pericia, atributo):
     valor = r(1,20)
     result = pericia + valor
     return result
+
+def showClasses():
+    desc = Describe
+    classes = digitar(desc.allClasses())
+    return classes
