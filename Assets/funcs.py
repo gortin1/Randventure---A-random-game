@@ -1,7 +1,9 @@
 from time import sleep as t
-from Assets.info.information import Describe
+from assets.info.information import Describe
 from random import randint as r
 import sys
+import os
+
 class wait:
     def smallwait():
         t(1)
@@ -47,6 +49,7 @@ def showPericias(race):
         case 'guerreiro':
             pericias = Describe.descricaoPericias(race)
             return pericias
+        
 
 def digitar(*args, delay=0.05):
     for arg in args:
@@ -63,7 +66,5 @@ def rolaracao(pericia, atributo):
     result = pericia + valor
     return result
 
-def showClasses():
-    desc = Describe
-    classes = digitar(desc.allClasses())
-    return classes
+def clear():
+    os.system('cls' if os.name == 'nt' else 'clear')

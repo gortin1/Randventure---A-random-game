@@ -2,18 +2,18 @@ from colorama import just_fix_windows_console, Fore, Style
 class Describe:
     def allClasses():
         return '\n'.join([
-            '1- barbaro',
-            '2- bardo',
-            '3- bruxo',
-            '4- clerigo',
-            '5- druida',
-            '6- feiticeiro',
-            '7- guerreiro',
-            '8- ladino',
-            '9- mago',
-            '10- monge',
-            '11- paladino',
-            '12- patrulheiro'
+            '1- Barbaro',
+            '2- Bardo',
+            '3- Bruxo',
+            '4- Clerigo',
+            '5- Druida',
+            '6- Feiticeiro',
+            '7- Guerreiro',
+            '8- Ladino',
+            '9- Mago',
+            '10- Monge',
+            '11- Paladino',
+            '12- Patrulheiro'
         ])
     def allRaces():
         return '\n'.join([
@@ -28,19 +28,161 @@ class Describe:
             '9- Tiefling'
         ])
     def classXrace(classe: str):
+        perfect = (Fore.GREEN + "Combinação perfeita."+ Style.RESET_ALL)
+        good = (Fore.BLUE + "Combinação boa."+ Style.RESET_ALL)
+        neutral = (Fore.WHITE + "Combinação neutra."+ Style.RESET_ALL)
+        bad = (Fore.RED + "Combinação ruim."+ Style.RESET_ALL)
         just_fix_windows_console()
         match classe.lower():
             case 'barbaro':
                 return '\n'.join([
-                    'Barbaro X Anao = ' + Fore.BLUE + "Combinação boa."+ Style.RESET_ALL,
-                    'Barbaro X Elfo = ' + Fore.WHITE + "Combinação neutra."+ Style.RESET_ALL,
-                    'Barbaro X Halfling = ' + Fore.BLUE + "Combinação boa."+ Style.RESET_ALL,
-                    'Barbaro X Humano = ' + Fore.BLUE + "Combinação boa."+ Style.RESET_ALL,
-                    'Barbaro X Draconato = ' + Fore.BLUE + "Combinação boa."+ Style.RESET_ALL,
-                    'Barbaro X Gnomo = ' + Fore.BLUE + "Combinação boa."+ Style.RESET_ALL,
-                    'Barbaro X Meio-Elfo = ' + Fore.WHITE + "Combinação neutra."+ Style.RESET_ALL,
-                    'Barbaro X Meio-Orc = ' + Fore.GREEN + "Combinação perfeita."+ Style.RESET_ALL,
-                    'Barbaro X Tiefling = ' + Fore.WHITE + "Combinação neutra."+ Style.RESET_ALL
+                    'Barbaro X Anao = ' + good,
+                    'Barbaro X Elfo = ' + neutral,
+                    'Barbaro X Halfling = ' + good,
+                    'Barbaro X Humano = ' + neutral,
+                    'Barbaro X Draconato = ' + good,
+                    'Barbaro X Gnomo = ' + good,
+                    'Barbaro X Meio-Elfo = ' + neutral,
+                    'Barbaro X Meio-Orc = ' + perfect,
+                    'Barbaro X Tiefling = ' + bad
+                ])
+            case 'bardo':
+                return '\n'.join([
+                    'Bardo X Anao = ' + neutral,
+                    'Bardo X Elfo = ' + good,
+                    'Bardo X Halfling = ' + neutral,
+                    'Bardo X Humano = ' + neutral,
+                    'Bardo X Draconato = ' + good,
+                    'Bardo X Gnomo = ' + neutral,
+                    'Bardo X Meio-Elfo = ' + perfect,
+                    'Bardo X Meio-Orc = ' + bad,
+                    'Bardo X Tiefling = ' + bad 
+                ])
+            case 'bruxo':
+                return '\n'.join([
+                    'Bruxo X Anao = ' + bad,
+                    'Bruxo X Elfo = ' + good,
+                    'Bruxo X Halfling = ' + bad,
+                    'Bruxo X Humano = ' + neutral,
+                    'Bruxo X Draconato = ' + good,
+                    'Bruxo X Gnomo = ' + neutral,
+                    'Bruxo X Meio-Elfo = ' + good,
+                    'Bruxo X Meio-Orc = ' + bad,
+                    'Bruxo X Tiefling = ' + perfect 
+                ])
+            case 'clerigo':
+                return '\n'.join([
+                    'Clerigo X Anao = ' + good,
+                    'Clerigo X Elfo = ' + good,
+                    'Clerigo X Halfling = ' + neutral,
+                    'Clerigo X Humano = ' + neutral,
+                    'Clerigo X Draconato = ' + neutral,
+                    'Clerigo X Gnomo = ' + neutral,
+                    'Clerigo X Meio-Elfo = ' + perfect,
+                    'Clerigo X Meio-Orc = ' + neutral,
+                    'Clerigo X Tiefling = ' + bad 
+                ])
+            case 'druida':
+                return '\n'.join([
+                    'Druida X Anao = ' + good,
+                    'Druida X Elfo = ' + good,
+                    'Druida X Halfling = ' + neutral,
+                    'Druida X Humano = ' + neutral,
+                    'Druida X Draconato = ' + neutral,
+                    'Druida X Gnomo = ' + neutral,
+                    'Druida X Meio-Elfo = ' + perfect,
+                    'Druida X Meio-Orc = ' + neutral,
+                    'Druida X Tiefling = ' + bad 
+                ])
+            case 'feiticeiro':
+                return '\n'.join([
+                    'Feiticeiro X Anao = ' + bad,
+                    'Feiticeiro X Elfo = ' + good,
+                    'Feiticeiro X Halfling = ' + bad,
+                    'Feiticeiro X Humano = ' + neutral,
+                    'Feiticeiro X Draconato = ' + good,
+                    'Feiticeiro X Gnomo = ' + neutral,
+                    'Feiticeiro X Meio-Elfo = ' + good,
+                    'Feiticeiro X Meio-Orc = ' + bad,
+                    'Feiticeiro X Tiefling = ' + perfect 
+                ])
+            case 'guerreiro':
+                return '\n'.join([
+                    'Guerreiro X Anao = ' + bad,
+                    'Guerreiro X Elfo = ' + good,
+                    'Guerreiro X Halfling = ' + bad,
+                    'Guerreiro X Humano = ' + neutral,
+                    'Guerreiro X Draconato = ' + good,
+                    'Guerreiro X Gnomo = ' + neutral,
+                    'Guerreiro X Meio-Elfo = ' + good,
+                    'Guerreiro X Meio-Orc = ' + bad,
+                    'Guerreiro X Tiefling = ' + perfect 
+                    #arrumar
+                ])
+            case 'ladino':
+                return '\n'.join([
+                    'Ladino X Anao = ' + bad,
+                    'Ladino X Elfo = ' + good,
+                    'Ladino X Halfling = ' + bad,
+                    'Ladino X Humano = ' + neutral,
+                    'Ladino X Draconato = ' + good,
+                    'Ladino X Gnomo = ' + neutral,
+                    'Ladino X Meio-Elfo = ' + good,
+                    'Ladino X Meio-Orc = ' + bad,
+                    'Ladino X Tiefling = ' + perfect 
+                    
+                ])
+            case 'mago':
+                return '\n'.join([
+                    'Mago X Anao = ' + bad,
+                    'Mago X Elfo = ' + good,
+                    'Mago X Halfling = ' + bad,
+                    'Mago X Humano = ' + neutral,
+                    'Mago X Draconato = ' + good,
+                    'Mago X Gnomo = ' + neutral,
+                    'Mago X Meio-Elfo = ' + good,
+                    'Mago X Meio-Orc = ' + bad,
+                    'Mago X Tiefling = ' + perfect 
+                    #arrumar
+                ])
+            case 'monge':
+                return '\n'.join([
+                    'Monge X Anao = ' + bad,
+                    'Monge X Elfo = ' + good,
+                    'Monge X Halfling = ' + bad,
+                    'Monge X Humano = ' + neutral,
+                    'Monge X Draconato = ' + good,
+                    'Monge X Gnomo = ' + neutral,
+                    'Monge X Meio-Elfo = ' + good,
+                    'Monge X Meio-Orc = ' + bad,
+                    'Monge X Tiefling = ' + perfect 
+                    #arrumar
+                ])
+            case 'paladino':
+                return '\n'.join([
+                    'Paladino X Anao = ' + bad,
+                    'Paladino X Elfo = ' + good,
+                    'Paladino X Halfling = ' + bad,
+                    'Paladino X Humano = ' + neutral,
+                    'Paladino X Draconato = ' + good,
+                    'Paladino X Gnomo = ' + neutral,
+                    'Paladino X Meio-Elfo = ' + good,
+                    'Paladino X Meio-Orc = ' + bad,
+                    'Paladino X Tiefling = ' + perfect 
+                    #arrumar
+                ])
+            case 'patrulheiro':
+                return '\n'.join([
+                    'Patrulheiro X Anao = ' + bad,
+                    'Patrulheiro X Elfo = ' + good,
+                    'Patrulheiro X Halfling = ' + bad,
+                    'Patrulheiro X Humano = ' + neutral,
+                    'Patrulheiro X Draconato = ' + good,
+                    'Patrulheiro X Gnomo = ' + neutral,
+                    'Patrulheiro X Meio-Elfo = ' + good,
+                    'Patrulheiro X Meio-Orc = ' + bad,
+                    'Patrulheiro X Tiefling = ' + perfect 
+                    #arrumar
                 ])
             #terminar o resto dasa classes
     def descricaoRaca(raceasked: str):

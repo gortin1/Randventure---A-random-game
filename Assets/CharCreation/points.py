@@ -1,4 +1,4 @@
-from assets.funcs import wait, showClasse, getClass, digitar, showPericias
+from assets.funcs import wait, showClasse, getClass, digitar, showPericias, clear
 
 def distribuirPontos(name):
     while True:
@@ -10,12 +10,14 @@ def distribuirPontos(name):
         answer1 = str(input("(Escreva S para sim ou N para não) \n"))
         while True:
             if answer1.lower() == "n":
+                clear()
                 break
             else:
                 showClasse()
                 digitar("Deseja saber de outra classe?")
                 answer2 = str(input("(Escreva S para sim ou N para não) \n"))
                 if answer2.lower() == "n":
+                    clear()
                     break
                 else:
                     continue
@@ -51,8 +53,7 @@ def distribuirPontos(name):
                         continue
                     forca = forca + add
                     pontosdisponiveis -= add
-                    print("\n\n\n\n\n\n\n")
-                    wait.mediumwait()
+                    clear()
                     continue
                 case 2:
                     print("\n\n")
@@ -67,8 +68,7 @@ def distribuirPontos(name):
                         continue
                     destreza = destreza + add
                     pontosdisponiveis -= add
-                    print("\n\n\n\n\n\n\n")
-                    wait.mediumwait()
+                    clear()
                     continue
                 case 3:
                     print("\n\n")
@@ -83,8 +83,7 @@ def distribuirPontos(name):
                         continue
                     constituicao = constituicao + add
                     pontosdisponiveis -= add
-                    print("\n\n\n\n\n\n\n")
-                    wait.mediumwait()
+                    clear()
                     continue
                 case 4:
                     print("\n\n")
@@ -99,8 +98,7 @@ def distribuirPontos(name):
                         continue
                     inteligencia = inteligencia + add
                     pontosdisponiveis -= add
-                    print("\n\n\n\n\n\n\n")
-                    wait.mediumwait()
+                    clear()
                     continue
                 case 5:
                     print("\n\n")
@@ -115,8 +113,7 @@ def distribuirPontos(name):
                         continue
                     sabedoria = sabedoria + add
                     pontosdisponiveis -= add
-                    print("\n\n\n\n\n\n\n")
-                    wait.mediumwait()
+                    clear()
                     continue
                 case 6:
                     print("\n\n")
@@ -131,12 +128,13 @@ def distribuirPontos(name):
                         continue
                     carisma = carisma + add
                     pontosdisponiveis -= add
-                    print("\n\n\n\n\n\n\n")
-                    wait.mediumwait()
+                    clear()
                     continue
                 case _:
                     print("\n\n")
-                    wait.smallwait()
+                    digitar("Escolha um atributo valido")
+                    clear()
+                    continue
         return {'forca': forca,
                 'destreza':destreza,
                 'constituicao':constituicao,
@@ -145,7 +143,6 @@ def distribuirPontos(name):
                 'carisma':carisma}
 
 def distribuirPericias(classe):
-
     match classe:
         case "druida":
             digitar("Bem vindo! iremos fazer a escolha de pericias!\n")
@@ -156,15 +153,17 @@ def distribuirPericias(classe):
             answer1 = str(input("(Escreva S para sim ou N para não) \n"))
             while True:
                 if answer1.lower() == "n":
+                    clear()
                     break
                 else:
-                    getClass(classe)
+                    showClasse()
+                    digitar("Deseja saber de outra classe?")
                     answer2 = str(input("(Escreva S para sim ou N para não) \n"))
                     if answer2.lower() == "n":
+                        clear()
                         break
                     else:
                         continue
-
             dictpericias ={
                 'pericias': {
                     'arcanismo': False,
