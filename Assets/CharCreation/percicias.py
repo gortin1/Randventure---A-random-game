@@ -1,7 +1,7 @@
 from character import charCreate
 charCreate()
-
-listPericia = {
+"""listPericia = {
+    
 
     'Atletismo': atributos['forca'],
     'acrobacia': atributos['destreza'],
@@ -21,4 +21,4 @@ listPericia = {
     'engancao': atributos['carisma'],
     'intimidacao': atributos['carisma'],
     'persuasao': atributos['carisma']
-}
+}"""

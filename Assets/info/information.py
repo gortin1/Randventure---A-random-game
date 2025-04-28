@@ -1,5 +1,5 @@
 from colorama import just_fix_windows_console, Fore, Style
-class Describe:
+class describe:
     def allClasses():
         return '\n'.join([
             '1- Barbaro',
@@ -130,7 +130,7 @@ class Describe:
                     'Ladino X Meio-Elfo = ' + good,
                     'Ladino X Meio-Orc = ' + bad,
                     'Ladino X Tiefling = ' + perfect 
-                    
+                    #arrumar
                 ])
             case 'mago':
                 return '\n'.join([
@@ -184,7 +184,7 @@ class Describe:
                     'Patrulheiro X Tiefling = ' + perfect 
                     #arrumar
                 ])
-            #terminar o resto dasa classes
+            
     def descricaoRaca(raceasked: str):
         match raceasked:
             case "humano":

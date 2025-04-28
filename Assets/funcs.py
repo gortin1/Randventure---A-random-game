@@ -1,5 +1,5 @@
 from time import sleep as t
-from assets.info.information import Describe
+from Assets.info.information import describe
 from random import randint as r
 import sys
 import os
@@ -15,41 +15,47 @@ def showClasse():
     print("Qual seria a classe?")
     wait.smallwait()
     classasked = str(input())
-    desc = Describe
+    desc = describe
     wait.longwait()
     return digitar(desc.descricaoClasse(classasked))
 def showRace():
     print("Qual seria a raça?")
     wait.smallwait()
     raceasked = str(input())
-    desc = Describe
+    desc = describe
     wait.longwait()
     return digitar(desc.descricaoRaca(raceasked))
-def getClass(classe):
-    classasked = classe
-    desc = Describe
-    wait.mediumwait()
-    return digitar(desc.descricaoClasse(classasked))
+def getClass(tipo,classe):
+    match tipo:
+        case 1:
+            classasked = classe
+            desc = describe
+            wait.mediumwait()
+            return digitar(desc.descricaoClasse(classasked))
+        case 2:
+            desc = describe
+            classasked = classe
+            return digitar(desc.classXrace(classasked))
 def getRace(race):
     raceasked = race
-    desc = Describe
+    desc = describe
     wait.mediumwait()
     return digitar(desc.descricaoRaca(raceasked))
 def showPericias(race):
     match race:
         case 'druida':
-            pericias = Describe.descricaoPericias(race)
+            pericias = describe.descricaoPericias(race)
             return pericias
         case 'barbaro':
-            pericias = Describe.descricaoPericias(race)
+            pericias = describe.descricaoPericias(race)
             return pericias
         case 'mago':
-            pericias = Describe.descricaoPericias(race)
+            pericias = describe.descricaoPericias(race)
             return pericias
         case 'guerreiro':
-            pericias = Describe.descricaoPericias(race)
+            pericias = describe.descricaoPericias(race)
             return pericias
-        
+   
 
 def digitar(*args, delay=0.05):
     for arg in args:
@@ -68,3 +74,6 @@ def rolaracao(pericia, atributo):
 
 def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
+    
+def showClasses():
+    return describe.allClasses()

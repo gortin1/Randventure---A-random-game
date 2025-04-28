@@ -1,4 +1,4 @@
-from Assets.funcs import digitar,showClasses
+from Assets.funcs import digitar,showClasses,getClass
 def charCreate():
     digitar("Bem vindo a criação de personagem de Randeventure")
     digitar("Primeiramente iremos definir o nome do seu personagem: ")
@@ -18,4 +18,4 @@ def charCreate():
                 classeChoose = int(input("Digite o numero que fica na frente da classe desejada: "))
                 match classeChoose:
                     case 1:
-                        
+                        getClass(2,'guerreiro')
