@@ -11,7 +11,7 @@ class wait:
         t(2.5)
     def longwait():
         t(5)
-def showClasse():
+def showClasse(type):
     print("Qual seria a classe?")
     wait.smallwait()
     classasked = str(input())
@@ -41,6 +41,7 @@ def getRace(race):
     desc = describe
     wait.mediumwait()
     return digitar(desc.descricaoRaca(raceasked))
+
 def showPericias(race):
     match race:
         case 'druida':
@@ -65,6 +66,7 @@ def digitar(*args, delay=0.05):
             sys.stdout.flush()
             t(delay)
     print()
+
 
 def rolaracao(pericia, atributo):
     pericia = (pericia)/2 + atributo

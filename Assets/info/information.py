@@ -187,38 +187,60 @@ class describe:
             
     def descricaoRaca(raceasked: str):
         match raceasked:
-            case "humano":
+            case "anao":
                 return '\n'.join([
-                    "Atributos: +1 em todos os valores de habilidade.",
-                    "Idade: Adultos no final da adolescencia; vivem menos de 100 anos.",
-                    "Tendencia: Variada, sem inclinacao predominante.",
-                    "Tamanho: Medio (entre 1,50 m e 1,80 m).",
-                    "Idiomas: Comum e um idioma adicional a escolha."
+                    "Atributos: +2 em Constituicao.",
+                    "Tendencia: Tendem ao Leal, geralmente bons.",
+                    "Tamanho: Medio (cerca de 1,20 m de altura).",
+                    "Idiomas: Comum e Anao.",
+                    "Visao no Escuro: Voce tem visão na penumbra e na noite.",
+                    "Resiliencia Anã: Voce possui resistencia contra veneno e dano de veneno.",
+                    "Sub raça: Voce deve escolher uma das duas sub-raças. Escolha entre Anão da colina e Anão da montanha.",
+                    "\n",
+                    "Anão da colina:",
+                    "Atributo: +1 em sabedoria.",
+                    "Tenacidade anã: Seu maximo de vida aumenta em 1, e sempre que sobe de nivel aumenta em mais 1 ponto adicional de vida",
+                    "\n",
+                    "Anão da montanha:",
+                    "Atributo: +2 em força."
                 ])
+            
             case "elfo":
                 return'\n'.join([
                     "Atributos: +2 em Destreza.",
-                    "Idade: Adultos por volta dos 100 anos; vivem ate 750 anos.",
                     "Tendencia: Tendem ao Caotico e geralmente sao bons.",
                     "Tamanho: Medio (entre 1,50 m e 1,80 m).",
                     "Idiomas: Comum e Elfico."
                 ])
-            case "anao":
+            case "halfling":
                 return '\n'.join([
-                    "Atributos: +2 em Constituicao.",
-                    "Idade: Adultos por volta dos 50 anos; vivem mais de 400 anos.",
-                    "Tendencia: Tendem ao Leal, geralmente bons.",
-                    "Tamanho: Medio (cerca de 1,20 m de altura).",
-                    "Idiomas: Comum e Anao."
+                    "Atributo: +2 em destreza.",
+                    "Tendencia: Tendem ao leal e bom.",
+                    "Tamanho: Pequeno (cerca de 0,90 m)",
+                    "Idiomas: comum e halfling"
+                    "Sortudo:"
                 ])
+            case "humano":
+                return '\n'.join([
+                    "Atributos: +1 em todos os valores de habilidade.",
+                    "Tendencia: Variada, sem inclinacao predominante.",
+                    "Tamanho: Medio (entre 1,50 m e 1,80 m).",
+                    "Idiomas: Comum e um idioma adicional a escolha."
+                ])
+            
+            
             case "meio-orc":
                 return '\n'.join([
                     "Atributos: +2 em Forca, +1 em Constituicao.",
-                    "Idade: Adultos por volta dos 14 anos; vivem ate cerca de 75 anos.",
                     "Tendencia: Tendem ao Caotico; podem ser bons ou maus.",
                     "Tamanho: Medio (entre 1,80 m e 2,10 m).",
                     "Idiomas: Comum e Orc."
                 ])
+            
+                
+      
+                
+            
             case _:
                 return print("Raca nao encontrada.")
         
