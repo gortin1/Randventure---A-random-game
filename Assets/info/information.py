@@ -211,6 +211,10 @@ class describe:
                     "Tendencia: Tendem ao Caotico e geralmente sao bons.",
                     "Tamanho: Medio (entre 1,50 m e 1,80 m).",
                     "Idiomas: Comum e Elfico."
+                    "Visao no Escuro: Voce tem visao na penumbra e no escuro"
+                    "Sentidos aguçados: Voce tem a pericia Percepção",
+                    "Ancestral Feérico: Voce não pode ser colocado para dormir e Voce tem resistencia contra ser enfeitiçados",
+                    ""
                 ])
             case "halfling":
                 return '\n'.join([

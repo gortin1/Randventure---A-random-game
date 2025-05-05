@@ -1,5 +1,5 @@
 from time import sleep as t
-from Assets.info.information import describe
+from assets.info.information import describe
 from random import randint as r
 import sys
 import os

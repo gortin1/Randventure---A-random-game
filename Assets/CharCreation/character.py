@@ -314,5 +314,9 @@ def charCreate():
                                 clear()
                                 continue
                         resists["veneno"] = True
-                case
+                case 'elfo':
+                    while True:
+                        digitar("")
+                        digitar(getRace(race))
+                        subRace = int(input(""))
                         
