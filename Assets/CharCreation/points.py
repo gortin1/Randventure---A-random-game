@@ -1,4 +1,4 @@
-from Assets.funcs import wait, showClasse, getClass, digitar, showPericias, clear
+from assets.funcs import wait, showClasse, getClass, digitar, showPericias, clear
 
 def distribuirPontos(name, genero):
     while True:
@@ -146,6 +146,8 @@ def distribuirPontos(name, genero):
                         "\n5- Sabedoria = ", sabedoria,
                         "\n6- Carisma = ", carisma,
                     )
+                    input("aperte Enter para continuar")
+                    clear()
                 return {'forca': forca,
                         'destreza':destreza,
                         'constituicao':constituicao,
@@ -295,6 +297,8 @@ def distribuirPontos(name, genero):
                     "\n5- Sabedoria = ", sabedoria,
                     "\n6- Carisma = ", carisma,
                 )
+                input("Aperte Enter para continuar")
+                clear()
                 return {'forca': forca,
                         'destreza':destreza,
                         'constituicao':constituicao,
