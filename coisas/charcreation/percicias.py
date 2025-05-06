@@ -1,4 +1,4 @@
-from character import charCreate
+from assets.charcreation.character import charCreate
 charCreate()
 """listPericia = {
     

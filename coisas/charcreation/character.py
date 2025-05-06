@@ -1,5 +1,5 @@
 from assets.funcs import digitar,getClass,clear, allclasse,allraces, getRace
-from .points import distribuirPericias,distribuirPontos
+from assets.charcreation.points import distribuirPericias,distribuirPontos
 from assets.info.information import Describe
 
 
