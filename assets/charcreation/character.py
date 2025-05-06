@@ -15,6 +15,16 @@ def charCreate():
         'radiante':False,
         'necrotico':False
     }
+    langsCons ={
+        'elfico': False,
+        'anao': False,
+        'gigante': False,
+        'orc': False,
+        'halfling': False,
+        'gnomico': False,
+        'goblin': False
+    }
+    
     clear()
     desc = Describe
     digitar("Bem vindo a criação de personagem de Randeventure")
@@ -170,9 +180,9 @@ def charCreate():
                             else: 
                                 continue
                 else:
-                    digitar("Digite um numero valido!") 
+                    digitar("Digite um numero valido!")
                     continue
-            clear()       
+            clear()
             digitar("Vamos escolher sua classe!")
             digitar(desc.allClasses())
             while True:
@@ -186,7 +196,7 @@ def charCreate():
                             if yn == "s":
                                 digitar("Classe escolhida:", classe)
                                 break
-                            else: 
+                            else:
                                 continue
                         case 2:
                             classe = 'bardo'
@@ -195,7 +205,7 @@ def charCreate():
                             if yn == "s":
                                 digitar("Classe escolhida:", classe)
                                 break
-                            else: 
+                            else:
                                 continue
                         case 3:
                             classe = 'bruxo'
@@ -204,7 +214,7 @@ def charCreate():
                             if yn == "s":
                                 digitar("Classe escolhida:", classe)
                                 break
-                            else: 
+                            else:
                                 continue
                         case 4:
                             classe = 'clerigo'
@@ -213,7 +223,7 @@ def charCreate():
                             if yn == "s":
                                 digitar("Classe escolhida:", classe)
                                 break
-                            else: 
+                            else:
                                 continue
                         case 5:
                             classe = 'druida'
@@ -222,7 +232,7 @@ def charCreate():
                             if yn == "s":
                                 digitar("Classe escolhida:", classe)
                                 break
-                            else: 
+                            else:
                                 continue
                         case 6:
                             classe = 'feiticeiro'
@@ -231,7 +241,7 @@ def charCreate():
                             if yn == "s":
                                 digitar("Classe escolhida:", classe)
                                 break
-                            else: 
+                            else:
                                 continue
                         case 7:
                             classe = 'guerreiro'
@@ -240,7 +250,7 @@ def charCreate():
                             if yn == "s":
                                 digitar("Classe escolhida:", classe)
                                 break
-                            else: 
+                            else:
                                 continue
                         case 8:
                             classe = 'ladino'
@@ -249,7 +259,7 @@ def charCreate():
                             if yn == "s":
                                 digitar("Classe escolhida:", classe)
                                 break
-                            else: 
+                            else:
                                 continue
                         case 9:
                             classe = 'mago'
@@ -258,7 +268,7 @@ def charCreate():
                             if yn == "s":
                                 digitar("Classe escolhida:", classe)
                                 break
-                            else: 
+                            else:
                                 continue
                         case 10:
                             classe = 'monge'
@@ -267,7 +277,7 @@ def charCreate():
                             if yn == "s":
                                 digitar("Classe escolhida:", classe)
                                 break
-                            else: 
+                            else:
                                 continue
                         case 11:
                             classe = 'paladino'
@@ -276,7 +286,7 @@ def charCreate():
                             if yn == "s":
                                 digitar("Classe escolhida:", classe)
                                 break
-                            else: 
+                            else:
                                 continue
                         case 12:
                             classe = 'patrulheiro'
@@ -285,15 +295,14 @@ def charCreate():
                             if yn == "s":
                                 digitar("Classe escolhida:", classe)
                                 break
-                            else: 
+                            else:
                                 continue
                         case _:
                             digitar("O numero digitado não esta listado, por favor digite um numero valido")
                             continue
-                            
                 else:
                     digitar("Por favor digite um numero valido!")
-                    continue    
+                    continue
             clear()
             digitar("Vamos começar com a distribuição de pontos!")
             pontos = distribuirPontos(name, 1)
@@ -303,10 +312,12 @@ def charCreate():
                     while True:
                         digitar("A raça na qual voce escolheu é", race)
                         digitar(getRace(race))
+                        langsCons['anao'] = True
                         subRace = int(input("Escolha entre Anão da colina ou da montanha (Se quiser o anao da colina digite 1, anao da montanha digite 2)"))
                         match subRace:
                             case 1:
                                 pontos['sabedoria'] += 1
+                                
                             case 2:
                                 pontos['forca'] += 2
                             case _:
@@ -314,9 +325,47 @@ def charCreate():
                                 clear()
                                 continue
                         resists["veneno"] = True
+                        
                 case 'elfo':
                     while True:
-                        digitar("")
+                        digitar("A raça na qual voce escolheu é",race)
                         digitar(getRace(race))
-                        subRace = int(input(""))
-                        
+                        langsCons["elfico"] = True
+                        subRace = int(input("Escolha entre Alto elfo, Elfo da floresta e Elfo negro (Se quiser o Alto elfo digite 1, Elfo da floresta digite 2, Elfo negro digite 3)"))
+                        match subRace: 
+                            case 1:
+                                pontos['inteligencia'] += 1
+                                for langs in langsCons:
+                                    if langs == True:
+                                        digitar(langs,": Conhecida")
+                                    else:
+                                        digitar(langs,": Desconhecida")
+                                
+                                lang = str(input("Escreva qual o idioma deseja aprender")).lower()
+                                match lang:
+                                    case 'anao':
+                                        langsCons["anao"] = True
+                                        digitar("O idioma",lang,"aprendido!")
+                                    case 'gigante':
+                                        langsCons["gigante"] = True
+                                        digitar("O idioma",lang,"aprendido!")
+                                    case 'goblin':
+                                        langsCons["goblin"] = True
+                                        digitar("O idioma",lang,"aprendido!")
+                                    case 'orc':
+                                        langsCons["orc"] = True
+                                        digitar("O idioma",lang,"aprendido!")
+                                    case 'gnomico':
+                                        langsCons["gnomico"] = True
+                                        digitar("O idioma",lang,"aprendido!")
+                                    case 'halfling':
+                                        langsCons["halfling"] = True
+                                        digitar("O idioma",lang,"aprendido!")
+                                    case _:
+                                        digitar("Escolha invalida! digite outra!")
+                                        clear()
+                                        continue
+                            case 2:
+                                pontos['sabedoria'] += 1
+                            case 3:
+                                pontos['carisma'] += 1

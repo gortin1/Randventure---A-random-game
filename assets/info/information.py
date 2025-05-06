@@ -214,7 +214,16 @@ class describe:
                     "Visao no Escuro: Voce tem visao na penumbra e no escuro"
                     "Sentidos aguçados: Voce tem a pericia Percepção",
                     "Ancestral Feérico: Voce não pode ser colocado para dormir e Voce tem resistencia contra ser enfeitiçados",
-                    ""
+                    "Sub-Racas: alto elfo, elfo da floresta e elfo negro",
+                    "\n",
+                    "Alto Elfo",
+                    "Atributos: +1 inteligencia",
+                    "Truque: Voce conhece um truque de mago (Atributo usado Inteligencia)",
+                    "Idioma adicional: Você pode ler, falar e escrever em um idioma a sua escolha",
+                    "\n",
+                    "Elfo da floresta",
+                    "Atributos: +1 sabedoria",
+                    "a"
                 ])
             case "halfling":
                 return '\n'.join([
