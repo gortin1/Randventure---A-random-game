@@ -1,6 +1,6 @@
 from assets.funcs import digitar,getClass,clear, allclasse,allraces, getRace
 from assets.charcreation.points import distribuirPericias,distribuirPontos
-from assets.info.information import Describe
+from assets.info.information import racesAndClasses
 
 
 
@@ -25,8 +25,9 @@ def charCreate():
         'goblin': False
     }
     
+    
     clear()
-    desc = Describe
+    desc = racesAndClasses
     digitar("Bem vindo a criação de personagem de Randeventure")
     digitar("Primeiramente iremos definir o nome do seu personagem: ")
     name = str(input("Digite o nome do personagem: "))
@@ -365,7 +366,9 @@ def charCreate():
                                         digitar("Escolha invalida! digite outra!")
                                         clear()
                                         continue
+                            
                             case 2:
                                 pontos['sabedoria'] += 1
+                                
                             case 3:
                                 pontos['carisma'] += 1

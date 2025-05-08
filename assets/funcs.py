@@ -1,5 +1,5 @@
 from time import sleep as t
-from assets.info.information import describe
+from assets.info.information import racesAndClasses
 from random import randint as r
 import sys
 import os
@@ -15,46 +15,46 @@ def showClasse(type):
     print("Qual seria a classe?")
     wait.smallwait()
     classasked = str(input())
-    desc = describe
+    desc = racesAndClasses
     wait.longwait()
     return digitar(desc.descricaoClasse(classasked))
 def showRace():
     print("Qual seria a raça?")
     wait.smallwait()
     raceasked = str(input())
-    desc = describe
+    desc = racesAndClasses
     wait.longwait()
     return digitar(desc.descricaoRaca(raceasked))
 def getClass(tipo,classe):
     match tipo:
         case 1:
             classasked = classe
-            desc = describe
+            desc = racesAndClasses
             wait.mediumwait()
             return digitar(desc.descricaoClasse(classasked))
         case 2:
-            desc = describe
+            desc = racesAndClasses
             classasked = classe
             return digitar(desc.classXrace(classasked))
 def getRace(race):
     raceasked = race
-    desc = describe
+    desc = racesAndClasses
     wait.mediumwait()
     return digitar(desc.descricaoRaca(raceasked))
 
 def showPericias(race):
     match race:
         case 'druida':
-            pericias = describe.descricaoPericias(race)
+            pericias = racesAndClasses.descricaoPericias(race)
             return pericias
         case 'barbaro':
-            pericias = describe.descricaoPericias(race)
+            pericias = racesAndClasses.descricaoPericias(race)
             return pericias
         case 'mago':
-            pericias = describe.descricaoPericias(race)
+            pericias = racesAndClasses.descricaoPericias(race)
             return pericias
         case 'guerreiro':
-            pericias = describe.descricaoPericias(race)
+            pericias = racesAndClasses.descricaoPericias(race)
             return pericias
    
 
@@ -78,4 +78,4 @@ def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
     
 def showClasses():
-    return describe.allClasses()
+    return racesAndClasses.allClasses()
