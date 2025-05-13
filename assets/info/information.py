@@ -322,22 +322,69 @@ class racesAndClasses:
                         'sobrevivencia'
                         ])
 class magias:
-    def magiasDisponiveisTruques(classe):
+    def magiasDisponiveisTruques(classe,nivelMagia):
         match classe:
             case 'bardo':
-                return'\n'.join([
-                    'Amizade (encantamento)',
-                    'Ataque Certeiro (adivinhação)',
-                    'Consertar (transmutação)',
-                    'Globos de Luz (evocação)',
-                    'Ilusão Menor (ilusão) ',
-                    'Luz (evocação)',
-                    'Mãos Mágicas (conjuração)',
-                    'Mensagem (transmutação)',
-                    'Prestidigitação (transmutação)',
-                    'Proteção contra Lâminas (abjuração)',
-                    'Zombaria Viciosa (encantamento)'
-            ])
+                match nivelMagia:
+                    case 0:
+                        return'\n'.join([
+                            'Amizade (encantamento)',
+                            'Ataque Certeiro (adivinhação)',
+                            'Consertar (transmutação)',
+                            'Globos de Luz (evocação)',
+                            'Ilusão Menor (ilusão) ',
+                            'Luz (evocação)',
+                            'Mãos Mágicas (conjuração)',
+                            'Mensagem (transmutação)',
+                            'Prestidigitação (transmutação)',
+                            'Proteção contra Lâminas (abjuração)',
+                            'Zombaria Viciosa (encantamento)'
+                    ])
+                    case 1:
+                        'Amizade animal (encantamento)',
+                        'Compreender Idiomas (adivinhação, ritual)', 
+                        'Curar Ferimentos (evocação)', 
+                        'Detectar Magia (adivinhação, ritual)',
+                        'Disfarçar-se (ilusão)', 
+                        'Enfeitiçar Pessoa (encantamento)', 
+                        'Escrita Ilusória (ilusão, ritual)', 
+                        'Falar com Animais (adivinhação, ritual)', 
+                        'Fogo das Fadas (evocação)', 
+                        'Heroísmo (encantamento)', 
+                        'Identificação (adivinhação, ritual)', 
+                        'Imagem Silenciosa (ilusão)', 
+                        'Onda Trovejante (evocação)',
+                        'Queda Suave (transmutação)',
+                        'Palavra Curativa (evocação)', 
+                        'Passos Longos (transmutação)', 
+                        'Perdição (encantamento)', 
+                        'Riso Histérico de Tasha (encantamento)', 
+                        'Servo Invisível (conjuração, ritual)', 
+                        'Sono (encantamento)', 
+                        'Sussurros Dissonantes (encantamento)'
+                    case 2:
+                        Acalmar Emoções (encantamento) 
+                        Aprimorar Habilidade (transmutação) 
+                        Arrombar (transmutação) 
+                        Boca Encantada (ilusão, ritual) 
+                        Cativar (encantamento) 
+                        Cegueira/Surdez (necromancia) 
+                        Coroa da Loucura (encantamento) 
+                        Esquentar Metal (transmutação) 
+                        Despedaçar (evocação) 
+                        Força Fantasmagórica (ilusão) 
+                        Detectar Pensamentos (adivinhação) 
+                        Imobilizar Pessoa (encantamento) 
+                        Invisibilidade (ilusão) 
+                        Localizar Animais ou Plantas (adivinhação, ritual) 
+                        Localizar Objeto (adivinhação) 
+                        Mensageiro Animal (encantamento, ritual) 
+                        Nuvem de Adagas (conjuração) 
+                        Restauração Menor (abjuração) 
+                        Silêncio (ilusão, ritual) 
+                        Sugestão (encantamento) 
+                        Ver o Invisível (adivinhação) 
+                        Zona da Verdade (encantamento)
             case 'bruxo':
                 return '\n'.join([
                     'Amizade (encantamento)',
@@ -370,7 +417,23 @@ class magias:
                     'Orientação (adivinhação) '
                     'Rajada de Veneno (conjuração)'
                 ])
+            case 'mago':
+                return '\n'.join([
+                    'Amizade (encantamento)',
+                    'Ataque Certeiro (adivinhação)' 
+                    'Consertar (transmutação)',
+                    'Espirro Ácido (conjuração)',
+                    'Globos de Luz (evocação)' ,
+                    'Ilusão Menor (ilusão)' ,
+                    'Luz (evocação)',
+                    'Mãos Mágicas (conjuração)' ,
+                    'Mensagem (transmutação)' ,
+                    'Prestidigitação (transmutação)',
+                    'Proteção contra Lâminas (abjuração)' ,
+                    'Raio de Fogo (evocação)'
+                ])
             case 'feiticeiro':
+                c
                 return '\n'.join([
                     'Amizade (encantamento)',
                     'Ataque Certeiro (adivinhação)' ,
@@ -388,5 +451,5 @@ class magias:
                     'Rajada de Veneno (conjuração)' ,
                     'Toque Arrepiante (necromancia)' ,
                     'Toque Chocante (evocação)'
-                ])     
+                ])
                      
