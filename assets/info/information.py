@@ -322,7 +322,7 @@ class racesAndClasses:
                         'sobrevivencia'
                         ])
 class magias:
-    def magiasDisponiveisTruques(classe,nivelMagia):
+    def magiasDisponiveis(classe,nivelMagia):
         match classe:
             case 'bardo':
                 match nivelMagia:
@@ -339,64 +339,177 @@ class magias:
                             'Prestidigitação (transmutação)',
                             'Proteção contra Lâminas (abjuração)',
                             'Zombaria Viciosa (encantamento)'
-                    ])
+                        ])
                     case 1:
-                        'Amizade animal (encantamento)',
-                        'Compreender Idiomas (adivinhação, ritual)', 
-                        'Curar Ferimentos (evocação)', 
-                        'Detectar Magia (adivinhação, ritual)',
-                        'Disfarçar-se (ilusão)', 
-                        'Enfeitiçar Pessoa (encantamento)', 
-                        'Escrita Ilusória (ilusão, ritual)', 
-                        'Falar com Animais (adivinhação, ritual)', 
-                        'Fogo das Fadas (evocação)', 
-                        'Heroísmo (encantamento)', 
-                        'Identificação (adivinhação, ritual)', 
-                        'Imagem Silenciosa (ilusão)', 
-                        'Onda Trovejante (evocação)',
-                        'Queda Suave (transmutação)',
-                        'Palavra Curativa (evocação)', 
-                        'Passos Longos (transmutação)', 
-                        'Perdição (encantamento)', 
-                        'Riso Histérico de Tasha (encantamento)', 
-                        'Servo Invisível (conjuração, ritual)', 
-                        'Sono (encantamento)', 
-                        'Sussurros Dissonantes (encantamento)'
+                        return '\n'.join([
+                            'Amizade animal (encantamento)',
+                            'Compreender Idiomas (adivinhação, ritual)', 
+                            'Curar Ferimentos (evocação)', 
+                            'Detectar Magia (adivinhação, ritual)',
+                            'Disfarçar-se (ilusão)', 
+                            'Enfeitiçar Pessoa (encantamento)', 
+                            'Escrita Ilusória (ilusão, ritual)', 
+                            'Falar com Animais (adivinhação, ritual)', 
+                            'Fogo das Fadas (evocação)', 
+                            'Heroísmo (encantamento)', 
+                            'Identificação (adivinhação, ritual)', 
+                            'Imagem Silenciosa (ilusão)', 
+                            'Onda Trovejante (evocação)',
+                            'Queda Suave (transmutação)',
+                            'Palavra Curativa (evocação)', 
+                            'Passos Longos (transmutação)', 
+                            'Perdição (encantamento)', 
+                            'Riso Histérico de Tasha (encantamento)', 
+                            'Servo Invisível (conjuração, ritual)', 
+                            'Sono (encantamento)', 
+                            'Sussurros Dissonantes (encantamento)'
+                        ])
                     case 2:
-                        Acalmar Emoções (encantamento) 
-                        Aprimorar Habilidade (transmutação) 
-                        Arrombar (transmutação) 
-                        Boca Encantada (ilusão, ritual) 
-                        Cativar (encantamento) 
-                        Cegueira/Surdez (necromancia) 
-                        Coroa da Loucura (encantamento) 
-                        Esquentar Metal (transmutação) 
-                        Despedaçar (evocação) 
-                        Força Fantasmagórica (ilusão) 
-                        Detectar Pensamentos (adivinhação) 
-                        Imobilizar Pessoa (encantamento) 
-                        Invisibilidade (ilusão) 
-                        Localizar Animais ou Plantas (adivinhação, ritual) 
-                        Localizar Objeto (adivinhação) 
-                        Mensageiro Animal (encantamento, ritual) 
-                        Nuvem de Adagas (conjuração) 
-                        Restauração Menor (abjuração) 
-                        Silêncio (ilusão, ritual) 
-                        Sugestão (encantamento) 
-                        Ver o Invisível (adivinhação) 
-                        Zona da Verdade (encantamento)
+                        return '\n'.join([
+                            'Acalmar Emoções (encantamento)',
+                            'Aprimorar Habilidade (transmutação)',
+                            'Arrombar (transmutação)', 
+                            'Boca Encantada (ilusão, ritual)',
+                            'Cativar (encantamento)',
+                            'Cegueira/Surdez (necromancia)', 
+                            'Coroa da Loucura (encantamento)',
+                            'Esquentar Metal (transmutação)', 
+                            'Despedaçar (evocação)',
+                            'Força Fantasmagórica (ilusão)',
+                            'Detectar Pensamentos (adivinhação)',
+                            'Imobilizar Pessoa (encantamento)', 
+                            'Invisibilidade (ilusão)', 
+                            'Localizar Animais ou Plantas (adivinhação, ritual)', 
+                            'Localizar Objeto (adivinhação)' ,
+                            'Mensageiro Animal (encantamento, ritual)' ,
+                            'Nuvem de Adagas (conjuração)' ,
+                            'Restauração Menor (abjuração)', 
+                            'Silêncio (ilusão, ritual)', 
+                            'Sugestão (encantamento)', 
+                            'Ver o Invisível (adivinhação)', 
+                            'Zona da Verdade (encantamento)'
+                        ])
+                    case 3:
+                        return '\n'.join([
+                            'Ampliar Plantas (transmutação)',
+                            'Clarividência (adivinhação)',
+                            'Dificultar Detecção (abjuração)', 
+                            'Dissipar Magia (abjuração)', 
+                            'Enviar Mensagem (evocação)', 
+                            'Falar com os Mortos (necromancia)', 
+                            'Falar com Plantas (transmutação)', 
+                            'Forjar Morte (necromancia, ritual)', 
+                            'Glifo de Vigilância (abjuração)', 
+                            'Idiomas (adivinhação)', 
+                            'Imagem Maior (ilusão)', 
+                            'Medo (ilusão)', 
+                            'Névoa Fétida (conjuração)', 
+                            'Padrão Hipnótico (ilusão)', 
+                            'Pequena Cabana de Leomund  (evocação, ritual)', 
+                            'Rogar Maldição (necromancia)'
+                        ])
+                    case 4:
+                        return '\n'.join([
+                            'Confusão (encantamento)',
+                            'Compulsão (encantamento)', 
+                            'Movimentação Livre (abjuração)', 
+                            'Invisibilidade Maior (ilusão)', 
+                            'Localizar Criatura (adivinhação)', 
+                            'Metamorfose (transmutação)', 
+                            'Porta Dimensional (conjuração)', 
+                            'Terreno Alucinógeno (ilusão)'
+                        ])
+                    case 5:
+                        return '\n'.join([
+                            'Âncora Planar (abjuração)',
+                            'Animar Objetos (transmutação)', 
+                            'Círculo de Teletransporte (conjuração)',
+                            'Conhecimento Lendário (adivinhação)',
+                            'Curar Ferimentos em Massa (evocação)', 
+                            'Despertar (transmutação)',
+                            'Despistar (ilusão)',
+                            'Dominar Pessoa (encantamento)',
+                            'Imobilizar Monstro (encantamento)',
+                            'Missão (encantamento)',
+                            'Modificar Memória (encantamento)', 
+                            'Restauração Maior (abjuração)',
+                            'Reviver os Mortos (necromancia)', 
+                            'Similaridade (ilusão)',
+                            'Sonho (ilusão)',
+                            'Vidência (adivinhação)'
+                        ])
             case 'bruxo':
-                return '\n'.join([
-                    'Amizade (encantamento)',
-                    'Ataque Certeiro (adivinhação)',
-                    'Ilusão Menor (ilusão)', 
-                    'Mãos Mágicas (conjuração)', 
-                    'Prestidigitação (transmutação)', 
-                    'Proteção contra Lâminas (abjuração)', 
-                    'Rajada de Veneno (conjuração)', 
-                    'Rajada Mística (evocação)', 
-                    'Toque Arrepiante (necromancia)' 
-                ])
+                match nivelMagia:
+                    case 0:
+                        return '\n'.join([
+                            'Amizade (encantamento)',
+                            'Ataque Certeiro (adivinhação)',
+                            'Ilusão Menor (ilusão)', 
+                            'Mãos Mágicas (conjuração)', 
+                            'Prestidigitação (transmutação)', 
+                            'Proteção contra Lâminas (abjuração)', 
+                            'Rajada de Veneno (conjuração)', 
+                            'Rajada Mística (evocação)', 
+                            'Toque Arrepiante (necromancia)'
+                        ])
+                    case 1:
+                        return '\n'.join([
+                            'Armadura de Agathys (abjuração)', 
+                            'Braços de Hadar (conjuração)',
+                            'Bruxaria (encantamento)', 
+                            'Compreender Idiomas (adivinhação, ritual)', 
+                            'Enfeitiçar Pessoa (encantamento)', 
+                            'Escrita ilusória (ilusão, ritual)', 
+                            'Proteção contra o Bem e Mal (abjuração)', 
+                            'Raio de Bruxa (evocação)', 
+                            'Recuo Acelerado (transmutação)', 
+                            'Repreensão Infernal (evocação)', 
+                            'Servo Invisível (conjuração, ritual)' 
+                        ])
+                    case 2:
+                        return '\n'.join([
+                            'Cativar (encantamento)',
+                            'Coroa da Loucura (encantmento)', 
+                            'Despedaçar (evocação)', 
+                            'Escuridão (evocação)', 
+                            'Imobilizar Pessoa (encantamento)', 
+                            'Invisibilidade (ilusão)', 
+                            'Nuvem de Adagas (conjuração)', 
+                            'Passo Nebuloso (conjuração)', 
+                            'Patas de Aranha (transmutação)', 
+                            'Raio do Enfraquecimento (necromancia)', 
+                            'Reflexos (ilusão)', 
+                            'Sugestão (encantamento)'
+                        ])
+                    case 3:
+                        return '\n'.join([
+                            'Círculo Mágico (abjuração)',
+                            'Contramágica (bjuração)', 
+                            'Dissipar Magia (abjuração)' ,
+                            'Fome de Hadar (conjuração)', 
+                            'Forma Gasosa (transmutação)', 
+                            'Idiomas (adivinhação)', 
+                            'Imagem Maior (ilusão)', 
+                            'Remover Maldição (abjuração)', 
+                            'Medo (ilusão)', 
+                            'Padrão Hipnótico (ilusão)' ,
+                            'Toque Vampírico (necromancia)', 
+                            'Voo (transmutação)'
+                        ])
+                    case 4:
+                        return '\n'.join([
+                            'Banimento (abjuração)',
+                            'Porta Dimensional (conjuração)',
+                            'Malogro (necromancia)',
+                            'Terreno Alucinógeno (ilusão)'
+                        ])
+                    case 5:
+                        return '\n'.join([
+                            'Contato Extraplanar (adivinhação, ritual)', 
+                            'Imobilizar Monstro (encantamento)',
+                            'Sonho (ilusão)',
+                            'Vidência (adivinhação)'
+                        ])
             case 'clerigo':
                 return '\n'.join([
                     'Chama Sagrada (evocação)', 
@@ -433,7 +546,6 @@ class magias:
                     'Raio de Fogo (evocação)'
                 ])
             case 'feiticeiro':
-                c
                 return '\n'.join([
                     'Amizade (encantamento)',
                     'Ataque Certeiro (adivinhação)' ,
@@ -452,4 +564,4 @@ class magias:
                     'Toque Arrepiante (necromancia)' ,
                     'Toque Chocante (evocação)'
                 ])
-                     
+  
