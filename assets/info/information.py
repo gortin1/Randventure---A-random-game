@@ -328,6 +328,8 @@ class magias:
                 match nivelMagia:
                     case 0:
                         return'\n'.join([
+                            'Nivel 0 (truques)',
+                            ' ',
                             'Amizade (encantamento)',
                             'Ataque Certeiro (adivinhação)',
                             'Consertar (transmutação)',
@@ -341,6 +343,8 @@ class magias:
                         ])
                     case 1:
                         return '\n'.join([
+                            'Nivel 1',
+                            ' ',
                             'Compreender Idiomas (adivinhação)', 
                             'Curar Ferimentos (evocação)', 
                             'Detectar Magia (adivinhação, ritual)',
@@ -356,6 +360,8 @@ class magias:
                         ])
                     case 2:
                         return '\n'.join([
+                            'Nivel 2',
+                            ' ',
                             'Aprimorar Habilidade (transmutação)',
                             'Arrombar (transmutação)', 
                             'Boca Encantada (ilusão)',
@@ -371,6 +377,8 @@ class magias:
                         ])
                     case 3:
                         return '\n'.join([
+                            'Nivel 3',
+                            ' ',
                             'Ampliar Plantas (transmutação)',
                             'Clarividência (adivinhação)', 
                             'Dissipar Magia (abjuração)',  
@@ -386,6 +394,8 @@ class magias:
                         ])
                     case 4:
                         return '\n'.join([
+                            'Nivel 4',
+                            ' ',
                             'Confusão (encantamento)',
                             'Compulsão (encantamento)', 
                             'Movimentação Livre (abjuração)', 
@@ -397,6 +407,8 @@ class magias:
                         ])
                     case 5:
                         return '\n'.join([
+                            'Nivel 5',
+                            ' ',
                             'Conhecimento Lendário (adivinhação)',
                             'Curar Ferimentos em Massa (evocação)', 
                             'Dominar Pessoa (encantamento)',
@@ -421,6 +433,8 @@ class magias:
                         ])
                     case 1:
                         return '\n'.join([
+                            'Nivel 1',
+                            ' ',
                             'Armadura de Agathys (abjuração)', 
                             'Braços de Hadar (conjuração)',
                             'Bruxaria (encantamento)', 
@@ -435,6 +449,8 @@ class magias:
                         ])
                     case 2:
                         return '\n'.join([
+                            'Nivel 2',
+                            ' ',
                             'Cativar (encantamento)',
                             'Coroa da Loucura (encantmento)', 
                             'Despedaçar (evocação)', 
@@ -450,6 +466,8 @@ class magias:
                         ])
                     case 3:
                         return '\n'.join([
+                            'Nivel 3',
+                            ' ',
                             'Círculo Mágico (abjuração)',
                             'Contramágica (bjuração)', 
                             'Dissipar Magia (abjuração)' ,
@@ -465,6 +483,8 @@ class magias:
                         ])
                     case 4:
                         return '\n'.join([
+                            'Nivel 4',
+                            ' ',
                             'Banimento (abjuração)',
                             'Porta Dimensional (conjuração)',
                             'Malogro (necromancia)',
@@ -472,6 +492,8 @@ class magias:
                         ])
                     case 5:
                         return '\n'.join([
+                            'Nivel 5',
+                            ' ',
                             'Contato Extraplanar (adivinhação, ritual)', 
                             'Imobilizar Monstro (encantamento)',
                             'Sonho (ilusão)',
@@ -481,6 +503,7 @@ class magias:
                 match nivelMagia:
                     case 0:        
                         return '\n'.join([
+                            
                             'Chama Sagrada (evocação)', 
                             'Consertar (transmutação)', 
                             'Estabilizar (necromancia)', 
