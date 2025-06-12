@@ -1,4 +1,4 @@
-# Randventure---A-random-game
+# Randventure---A-random-game (INCOMPLETO AINDA)
 
 Randventure – Um RPG Solo Baseado em D&D, Feito em Python
 
